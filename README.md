@@ -16,9 +16,9 @@ You will be tasked with "remixing" the provided application and adjusting it for
 
 Regardless of your choice, the API should manage a **collection of objects**.
 
-**You are only required to build the server application (controllers and model)** but, as a bonus challenge, you are encouraged to build a frontend that interacts with the server. Doing so will confirm your mastery of the material!
+To get to 75% completion, you are required to build the server application (controllers and model). To get 100% on this assignment, you must build a frontend that interacts with the server. Completing both sides of the application will confirm your mastery of the material!
 
-Remember, a server application is mostly “boilerplate” (it’s the same every time) so feel free to copy the example applications in the notes and refactor them to suit your needs. Refactoring is the real challenge here, not creating from scratch.
+Remember, a server application is mostly “boilerplate” (it’s the same every time) so feel free to copy the example applications in the notes and refactor them to suit your needs. Remixing is the real challenge here, not creating from scratch.
 
 ### Setup
 
@@ -55,11 +55,15 @@ Next, create a `server` directory for your server application and set up the dep
 
 ## Technical Requirements
 
-Below, you will find technical requirements for this assignment.
+Below, you will find the technical requirements for this assignment.
 
-There are a total of 15 requirements and 5 bonus requirements.
+There are a total of 20 total requirements:
+- 6 model requirements
+- 8 endpoint/controller requirements
+- 1 deployment requirement
+- 5 frontend requirements
 
-### Data Management Requirements
+### Model Requirements
 
 - [ ] A collection of objects is managed by the server API
 - [ ] Every object in the collection has a unique `id` and at least two (2) additional properties
@@ -71,7 +75,7 @@ There are a total of 15 requirements and 5 bonus requirements.
   - [ ] a `static` method to **update** an existing resource.
   - [ ] a `static` method to **delete** an existing resource.
 
-### API Requirements
+### Endpoint / Controller Requirements
 
 * The server has endpoints including at least:
   - [ ] one `GET` method
@@ -88,14 +92,13 @@ There are a total of 15 requirements and 5 bonus requirements.
 
 - [ ] Your application is deployed using Render and the public URL is added to the top of this README.
 
-### Bonus
+### Frontend Requirements
 
-- [ ] The server serves a frontend application at `/`
-- [ ] The frontend application is able to send a `GET request` for and render the collection of resources from the server's "database"
-- [ ] The frontend application is able to send a `POST request` to create a new resource in the server's "database".
-- [ ] The frontend application is able to send a `PATCH request` to update an existing resource in the server's "database".
-- [ ] The frontend application is able to send a `DELETE request` to delete an existing resource in the server's "database".
-
+- [ ] The server serves a frontend application at `/` using `express.static()` middleware.
+- [ ] The frontend application can send a `GET request` for and render the collection of resources from the server's "database"
+- [ ] The frontend application can send a `POST request` to create a new resource in the server's "database".
+- [ ] The frontend application can send a `PATCH request` to update an existing resource in the server's "database".
+- [ ] The frontend application can send a `DELETE request` to delete an existing resource in the server's "database".
 
 ## Error Codes:
 

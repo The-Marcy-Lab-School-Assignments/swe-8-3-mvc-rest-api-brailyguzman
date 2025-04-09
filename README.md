@@ -4,11 +4,13 @@ Deployment Link:
 
 ## Overview
 
-The homework this week will be a little bit different! Rather than building something from scratch, you will be "remixing" code found in the `1-fellow-tracker-final/` directory of the repo below to build your own app! 
+The homework this week will be a little bit different! Rather than building something from scratch, you will be "remixing" code found in the `2-fellow-tracker-final-mvc/` directory of the repo below to build your own app! 
 
 https://github.com/The-Marcy-Lab-School/8-1-0-express-rest-api-model
 
 This repository contains a server application with controllers and a model for managing a collection of `Fellow` objects. The repository also provides a frontend application that enables users to interact with the server's API through various forms and buttons.
+
+> You can also look at `1-fellow-tracker-final` to see the application WITHOUT the MVC architecture implemented. The functionality is the same but the file structure is simplified.
 
 ### Your Task
 

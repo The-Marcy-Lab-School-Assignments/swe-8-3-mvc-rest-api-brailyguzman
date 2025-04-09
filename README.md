@@ -81,7 +81,7 @@ There are a total of 20 total requirements:
   - [ ] one `GET` method
   - [ ] one `POST` method
   - [ ] one `PATCH` method with a route parameter for `:id`
-  - [ ] one `UPDATE` method with a route parameter for `:id`
+  - [ ] one `DELETE` method with a route parameter for `:id`
 
 - [ ] The server can parse JSON in incoming requests with `express.json()` middleware
 - [ ] All endpoints begin with `/api`

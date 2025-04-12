@@ -37,6 +37,7 @@ class User {
     };
 
     users.push(newUser);
+
     return newUser;
   }
 
@@ -50,6 +51,10 @@ class User {
 
   static edit(id, email) {
     const userIndex = users.findIndex((user) => user.id === id);
+
+    if (userIndex < 0) {
+      return null;
+    }
 
     const user = users[userIndex];
     user.email = email;

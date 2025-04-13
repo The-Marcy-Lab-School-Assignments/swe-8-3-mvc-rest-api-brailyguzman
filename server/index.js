@@ -2,11 +2,11 @@ const express = require('express');
 const path = require('path');
 const logRoutes = require('./middleware/logRoutes.js');
 const {
-  getUserController,
-  newUserController,
-  editUserController,
-  deleteUserController,
-  getUsersController,
+  createUser,
+  serveUsers,
+  serveUser,
+  editUser,
+  deleteUser,
 } = require('./controllers/userController.js');
 
 const app = express();
@@ -28,11 +28,11 @@ app.use(logRoutes);
 app.use(serveStatic);
 app.use(parseJSON);
 
-app.post('/api/users', newUserController);
-app.get('/api/users', getUsersController);
+app.post('/api/users', createUser);
+app.get('/api/users', serveUsers);
 
-app.get('/api/users/:id', getUserController);
-app.patch('/api/users/:id', editUserController);
-app.delete('/api/users/:id', deleteUserController);
+app.get('/api/users/:id', serveUser);
+app.patch('/api/users/:id', editUser);
+app.delete('/api/users/:id', deleteUser);
 
 app.listen(port, () => console.log(`listening at http://localhost:${port}`));

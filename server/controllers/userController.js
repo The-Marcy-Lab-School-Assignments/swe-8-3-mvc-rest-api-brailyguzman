@@ -1,12 +1,12 @@
 const User = require('../models/User.js');
 
-const getUsersController = (req, res) => {
+const serveUsers = (req, res) => {
   const users = User.list();
 
   return res.status(200).json({ users });
 };
 
-const getUserController = (req, res) => {
+const serveUser = (req, res) => {
   const { id } = req.params;
 
   if (!id > 0) {
@@ -22,7 +22,7 @@ const getUserController = (req, res) => {
   res.status(200).json({ user: foundUser });
 };
 
-const newUserController = (req, res) => {
+const createUser = (req, res) => {
   const { name, email } = req.body;
 
   if (!name || !email) {
@@ -36,7 +36,7 @@ const newUserController = (req, res) => {
     .json({ message: 'Successfully created user', user: createdUser });
 };
 
-const editUserController = (req, res) => {
+const editUser = (req, res) => {
   console.log('patching user');
   const { email } = req.body;
 
@@ -57,7 +57,7 @@ const editUserController = (req, res) => {
   res.status(204).send({ editedUser });
 };
 
-const deleteUserController = (req, res) => {
+const deleteUser = (req, res) => {
   const { id } = req.params;
 
   if (!id || Number(id) <= 0) {
@@ -74,9 +74,9 @@ const deleteUserController = (req, res) => {
 };
 
 module.exports = {
-  getUsersController,
-  getUserController,
-  newUserController,
-  editUserController,
-  deleteUserController,
+  serveUser,
+  serveUsers,
+  createUser,
+  editUser,
+  deleteUser,
 };
